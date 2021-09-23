@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record model="ir.ui.view" id="product_product_family_form_view">
+            <field name="name">product.family.form</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+                <data>
+                    <field name="categ_id" position="after">
+                        <field name="product_family_id"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+        <!-- <record id="product_search_form_view_family" model="ir.ui.view"> -->
+        <!--     <field name="name">product.search.form.view.family</field> -->
+        <!--     <field name="model">product.template</field> -->
+        <!--     <field name="type">search</field> -->
+        <!--     <field name="inherit_id" ref="stock.product_template_search_form_view_stock" /> -->
+        <!--     <field name="arch" type="xml"> -->
+        <!--         <field name="warehouse_id" position="after"> -->
+        <!--             <field name="product_family_id" widget="selection" /> -->
+        <!--         </field> -->
+        <!--         <filter name="real_stock_negative" position="after"> -->
+        <!--             <filter string='Product Family' -->
+        <!--                 domain="[]" -->
+        <!--                 group_by="product_family_id" /> -->
+        <!--         </filter> -->
+        <!--     </field> -->
+        <!-- </record> -->
+</odoo>
