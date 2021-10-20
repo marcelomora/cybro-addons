@@ -8,4 +8,14 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "data": [
+        "views/account_journal_views.xml",
+    ],
+    "depends": [
+        "sale", "account"
+    ],
+
+
 }
+
+
