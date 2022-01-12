@@ -76,7 +76,7 @@
          <menuitem id="product_brand_inventory"
                    name="Product Brands"
                    action="product_brand_action"
-                   parent="stock.menu_stock_inventory_control"
-                   sequence="2"/>
+                   parent="stock.menu_stock_config_settings"
+                   sequence="90"/>
     </data>
 </odoo>

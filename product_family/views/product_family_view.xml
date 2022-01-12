@@ -31,11 +31,11 @@
             <field name="name">Product Family</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">product.family</field>
-            <field name="view_type">form</field>
+            <!-- <field name="view_type">form</field> -->
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="product_family_tree_view" />
         </record>
 
         <menuitem id="product_family_menu" name="Product Family"
-            parent="stock.menu_stock_config_settings" action="action_product_family_tree_view" />
+            parent="stock.menu_stock_config_settings" action="action_product_family_tree_view" sequence="95" />
 </odoo>
