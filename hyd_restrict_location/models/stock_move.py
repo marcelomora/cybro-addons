@@ -17,6 +17,7 @@ class StockMove(models.Model):
         """."""
         uid = self.env.user.id
         for record in self:
+            # import pdb; pdb.set_trace();
             srcl = record.location_id
             dstl = record.location_dest_id
 
@@ -27,4 +28,4 @@ class StockMove(models.Model):
             if dstl.allowed_users and uid not in dstl.allowed_users.ids:
                 allowed = ','.join(dstl.allowed_users.mapped("name"))
                 raise ValidationError(TEMP_MOVE_RESTRICT % (allowed, "to"))
-            super(StockMove, self)._action_done()
+            return super(StockMove, self)._action_done()
